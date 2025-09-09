@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: azure;
+            color:rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: antiquewhite;
+            border-radius: 12px;
+            border:2px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+
+        }
+
+        .form-name {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+
+        }
+
+        input select,textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+
+        }
+
+    
+
+        button:hover {
+            background: rgb(36, 114, 186);
+            cursor: pointer;
+        }
+        @media (max-width:600px){
+            
+                max-width: 100px;
+            
+        }
+        @media (min-width:601px) and (max-width:900px){
+            body{
+                grid-template-columns: 1fr 1.4fr;
+            }
+        }
+        @media (min-width:901px){
+           body{
+               grid-template-columns: 1fr 2fr;
+           }
+            
+        
+           } 
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-name">Student Registration Form</div><br>
+        <div>
+            <form>
+                <div class="row">
+                    <label for="name">Name :</label>
+                    <input name="name" type="text" id="name" required placeholder="Enter your name">
+                </div><br>
+                <div class="row">
+                    <label for="email">Email :</label>
+                    <input name="email" type="email" id="email" required placeholder="your@gmail.com">
+                </div><br>
+                <div class="row">
+                    <label for="gender">Gender :</label>
+                    <select name="gender" id="gender" required>
+                        <option>Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+
+                </div><br>
+                <div class="row">
+                    <label for="Password">Password :</label>
+                    <input name="password" type="password" id="password">
+
+                </div><br>
+                <div class="row">
+                    <label for="hobbies">Hobbies :</label>
+                    <textarea rows="5" cols="20"></textarea>
+                </div><br>
+             
+                 <center><button type="submit">Submit</button></center>  
+              
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
